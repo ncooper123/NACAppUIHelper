@@ -16,9 +16,16 @@
 //TEXT-FIELD CHECKING
 //////////////////////////
 
++ (NSString *) getNonemptyStringFromSource:(NSString *)string {
+    if (string == nil || string == (id)[NSNull null] || [string isEqualToString:@""]){
+        return nil;
+    }
+    else return string;
+}
+
 
 + (NSString *) getTrimmedNonemptyStringFromSource:(NSString *)string {
-  if (string == nil){
+  if (string == nil || string == (id)[NSNull null]){
     return nil;
   }
   NSString *trimmed = [string stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];

@@ -20,6 +20,7 @@
  * nil if the value is blank/invalid.
  */
 
++ (NSString *) getNonemptyStringFromSource:(NSString*)string;
 + (NSString *) getTrimmedNonemptyStringFromSource:(NSString *)string;
 + (NSNumber *) getPositiveIntegerFromSource: (NSString *)string;
 + (NSString *) getTrimmedServerAddressFromSource:(NSString*)string;
